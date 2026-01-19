@@ -1,5 +1,5 @@
 function updateCountdown() {
-    const targetDate = new Date('2026-01-24T20:00:00').getTime(); 
+    const targetDate = new Date('2026-01-24T20:00:00').getTime();
     const now = new Date().getTime();
     const distance = targetDate - now;
 
@@ -25,12 +25,15 @@ document.getElementById('accept-btn').addEventListener('click', function() {
     
     message.scrollIntoView({ behavior: 'smooth' });
     
+    const audio = document.getElementById('bg-music');
+    audio.muted = false;
+    audio.play();
     
     startPersonalTimer();
 });
 
 function startPersonalTimer() {
-    const targetDate = new Date('2026-01-24T20:00:00').getTime(); 
+    const targetDate = new Date('2026-01-24T20:00:00').getTime();
     const timerElement = document.getElementById('event-timer');
     
     console.log('Data alvo:', new Date(targetDate)); 
@@ -69,7 +72,11 @@ document.getElementById('share-btn').addEventListener('click', function() {
 });
 
 window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * -0.5;
-    document.querySelector('.poster img').style.transform = `translateY(${rate}px)`;
+    if (window.innerWidth >= 768) { 
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        document.querySelector('.poster img').style.transform = `translateY(${rate}px)`;
+    } else {
+        document.querySelector('.poster img').style.transform = 'none';
+    }
 });
