@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convite interativo para assistir Silent Hill 2 no cinema. Feito por Gabriel Cardoso.">
+    <meta property="og:title" content="Convite para Silent Hill 2">
+    <meta property="og:description" content="Venha mergulhar no terror conosco!">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/pt/5/5b/Silent_Hill_2_poster.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <title>Convite para Silent Hill 2</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+
+    <header>
+        <h1><i class="fas fa-film"></i> Convite Especial</h1>
+        <p>Para uma noite de terror inesquecível</p>
+    </header>
+
+    <main id="main-content">
+        <section class="invite-section">
+            <div class="poster">
+                <img src="https://meups.com.br/wp-content/uploads/2025/12/G8UNIUzWEAkLSHG.jpeg" alt="Poster de Silent Hill 2: Regresso para o Inferno" loading="lazy">
+            </div>
+            <div class="details">
+                <h2>Silent Hill 2: Regresso para o Inferno</h2>
+                <p><strong>Data:</strong> Sábado, 24 de Janeiro de 2026 </p>
+                <p><strong>Horário:</strong> 20:00</p>
+                <p><strong>Local:</strong> Cinemark São José dos Campos</p>
+                <p><strong>Compra de ingressos:</strong> <a href="https://www.ingresso.com/filme/terror-em-silent-hill-regresso-para-o-inferno?city=sao-jose-dos-campos" target="_blank" aria-label="Link para comprar ingressos no ingresso.com"><i class="fas fa-ticket-alt"></i> Clique aqui</a></p>
+                <div id="countdown">
+                    <p><strong>Countdown:</strong> <span id="time-left"></span></p>
+                </div>
+                <p>Minha Maravilhosa! , vamos mergulhar no pesadelo juntos? Aceite este convite e prepare-se para o terror!</p>
+                <button id="accept-btn" aria-label="Aceitar convite e revelar mensagem"><i class="fas fa-check"></i> Aceitar Convite</button>
+                <div id="message" class="hidden">
+                    <p>🎥 Ótimo! Mal posso esperar por nossa noite de suspense. Te amo! 💀</p>
+                    <div id="personal-timer" aria-live="polite">
+                        <p><strong>Timer para o evento:</strong> <span id="event-timer"></span></p>
+                    </div>
+                    <button id="share-btn" aria-label="Compartilhar convite"><i class="fas fa-share"></i> Compartilhar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito por <a href="https://www.linkedin.com/in/gabriel-alexandre-marques-cardoso-0041101ab/" target="_blank" aria-label="Perfil LinkedIn de Gabriel Cardoso"><i class="fab fa-linkedin"></i> Gabriel Cardoso</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

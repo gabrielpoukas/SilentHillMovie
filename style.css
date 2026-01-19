@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(51, 51, 51, 0.8) 100%), 
+                url('./img/1.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #ff0000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #ff0000;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+header p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.invite-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.poster img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.poster img:hover {
+    transform: scale(1.05);
+}
+
+.details {
+    text-align: center;
+}
+
+.details h2 {
+    font-size: 1.5rem;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.details p {
+    margin-bottom: 10px;
+}
+
+.details a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.details a:hover, .details a:focus {
+    color: #fff;
+    outline: 2px solid #ff0000;
+}
+
+#countdown {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+#accept-btn, #share-btn {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#accept-btn:hover, #share-btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+#accept-btn:focus, #share-btn:focus {
+    outline: 2px solid #fff;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff0000;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#message.show {
+    opacity: 1;
+}
+
+#personal-timer {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #fff;
+    animation: pulse 2s infinite; 
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid #ff0000;
+}
+
+footer a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover, footer a:focus {
+    color: #fff;
+    outline: 2px solid #ff0000;
+}
+
+@media (min-width: 768px) {
+    .invite-section {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .poster {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .details {
+        flex: 1;
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .invite-section {
+        max-width: 800px;
+    }
+}
